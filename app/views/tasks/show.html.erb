@@ -1,6 +1,6 @@
 <h1><%= @task.title %></h1>
-<p>Details: <%= @task.details %></p>
-<p>Completed: <%= @task.completed %></p>
+<p class="callout bd-callout-warning">Details: <%= @task.details %></p>
+<p>Completed: <%= @task.completed ? "✅" : "❌" %></p>
 
 <%= link_to "Edit task", edit_task_path, class: "btn btn-secondary" %>
 <%= link_to "Delete task", task_path(@task), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger"%></li>
